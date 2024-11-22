@@ -1,21 +1,180 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
+/* Estilo global */
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Arial', 'Helvetica', sans-serif;
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 0;
+  color: #1a1a1a;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Container geral */
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Cabeçalho */
+.header {
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.logo img {
+  border-radius: 50%;
+  border: 1px solid #ddd;
+}
+
+.menu-button {
+  width: 40px;
+  height: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.menu-button::before,
+.menu-button::after,
+.menu-button div {
+  content: '';
+  display: block;
+  height: 4px;
+  width: 100%;
+  background-color: #333;
+  border-radius: 2px;
+}
+
+.divider {
+  height: 4px;
+  background: linear-gradient(to right, #007acc, #00c7ff);
+}
+
+/* Conteúdo Principal */
+.main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.main-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 3rem;
+}
+
+.text-content {
+  flex: 1;
+  text-align: left;
+  margin-top: -1rem; /* Levanta o texto */
+}
+
+.text-content h2 {
+  font-size: 2.5rem;
+  color: #007acc;
+  margin-bottom: 1rem;
+}
+
+.text-content p {
+  font-size: 1.2rem;
+  color: #4a4a4a;
+}
+
+.image-content {
+  flex: 1;
+  text-align: right;
+}
+
+.image-content img {
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  max-width: 100%;
+}
+
+/* Rodapé */
+.footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 2rem;
+  margin-top: auto;
+  position: sticky;
+  bottom: 0;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.social-links img {
+  filter: brightness(0) invert(1);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.social-links img:hover {
+  transform: scale(1.2);
+  opacity: 0.85;
+}
+
+.footer-bottom {
+  font-size: 0.875rem;
+  color: #ccc;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .main-section {
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 2rem;
+  }
+
+  .text-content h2 {
+    font-size: 2rem;
+  }
+
+  .text-content p {
+    font-size: 1rem;
+  }
+
+  .image-content img {
+    width: 100%;
+  }
+
+  .menu-button {
+    width: 30px;
+    height: 24px;
+  }
+
+  .menu-button::before,
+  .menu-button::after,
+  .menu-button div {
+    height: 3px;
+  }
 }
