@@ -7,13 +7,13 @@ export default function Home() {
       {/* Cabeçalho */}
       <header className="w-full bg-white shadow-md py-4 px-8 flex items-center justify-between sticky top-0 z-50">
         <div className="flex items-center space-x-4">
-              <Image
-        src="/img/logo.png"
-        alt="RescueEnergy Logo"
-        width={50}
-        height={50}
-        className="rounded-full"
-      />
+          <Image
+            src="/img/logo.png" // Caminho correto para a imagem do logo
+            alt="RescueEnergy Logo"
+            width={50}
+            height={50}
+            className="rounded-full"
+          />
           <h1 className="text-xl font-bold">RescueEnergy</h1>
         </div>
         <nav className="hidden md:flex space-x-6">
@@ -40,13 +40,13 @@ export default function Home() {
             </p>
           </div>
           <div className="flex-1">
-            <Image
-              src="/img/sample-image.jpg" // Substitua pelo caminho correto da imagem
-              alt="Piso gerador de energia"
-              width={500}
-              height={300}
-              className="rounded-lg shadow-md"
-            />
+                  <Image
+          src="/img/PisoGeradorDeEnergia.png" // Caminho correto para a imagem
+          alt="Piso gerador de energia"
+          width={500}
+          height={300}
+          className="rounded-lg shadow-md"
+        />
           </div>
         </section>
       </main>
@@ -57,7 +57,7 @@ export default function Home() {
           {/* Logo e Nome */}
           <div className="flex items-center space-x-4">
             <Image
-              src="/img/ImgRescueEnergy.jpeg" // Certifique-se de que o caminho está correto
+              src="/img/logo.png" // Certifique-se de que o arquivo está na pasta correta
               alt="RescueEnergy Logo"
               width={50}
               height={50}
@@ -71,10 +71,16 @@ export default function Home() {
             <Link href="/sobre" className="hover:text-gray-100 transition-colors">
               Sobre
             </Link>
-            <Link href="/contato" className="hover:text-gray-100 transition-colors">
+            <Link
+              href="/contato"
+              className="hover:text-gray-100 transition-colors"
+            >
               Contato
             </Link>
-            <Link href="/politica" className="hover:text-gray-100 transition-colors">
+            <Link
+              href="/politica"
+              className="hover:text-gray-100 transition-colors"
+            >
               Política de Privacidade
             </Link>
           </div>
@@ -88,7 +94,7 @@ export default function Home() {
               className="hover:opacity-80"
             >
               <Image
-                src="/img/whatsapp-icon.svg"
+                src="/img/LogoWhatsapp.png" // Certifique-se de que o arquivo está correto
                 alt="WhatsApp"
                 width={24}
                 height={24}
@@ -101,7 +107,7 @@ export default function Home() {
               className="hover:opacity-80"
             >
               <Image
-                src="/img/instagram-icon.svg"
+                src="/img/LogoInstagram.png" // Certifique-se de que o arquivo está correto
                 alt="Instagram"
                 width={24}
                 height={24}
@@ -113,7 +119,12 @@ export default function Home() {
               rel="noopener noreferrer"
               className="hover:opacity-80"
             >
-              <Image src="/img/email-icon.svg" alt="Email" width={24} height={24} />
+              <Image
+                src="/img/LogoGmail.png" // Certifique-se de que o arquivo está correto
+                alt="Email"
+                width={24}
+                height={24}
+              />
             </a>
           </div>
         </div>
