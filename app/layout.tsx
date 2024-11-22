@@ -25,8 +25,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" href="/img/ImgRescueEnergy.jpeg" />
+      </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased transition-colors duration-300`}
+        className={`${geistSans.variable} ${geistMono.variable} bg-gray-50 dark:bg-gray-900 transition-colors duration-300 text-gray-900 dark:text-gray-100`}
       >
         {children}
       </body>
